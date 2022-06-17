@@ -16,7 +16,14 @@
 <body class="pt-5">
     <div id="app">
         <div class="container">
-            <button class="btn btn-success" @click="generateEmail">genera 10 email</button>
+            <button class="btn btn-success" @click="generateTenEmail">
+                genera 10 email
+            </button>
+            <ul>
+                <li v-if="emails.length === 10" v-for="email in emails">
+                    {{email}}
+                </li>
+            </ul>
         </div>
     </div>
     

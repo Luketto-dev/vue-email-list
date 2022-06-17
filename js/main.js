@@ -11,11 +11,23 @@ new Vue({
     el: "#app",
     data:{
         email: null,
+        emails : []
     },
-    mathods:{
-        generateEmail(){
+    methods:{
+        generateTenEmail(){
             // recuperare tramite chiamata ajax una email
-            console.log('sono nel click')
+            this.emails= []
+            for (let i = 0; i < 10; i++) {
+                axios.get("https:flynn.boolean.careers/exercises/api/random/mail")
+                .then((axiosResp) => {
+                this.email = axiosResp.data.response
+                this.emails.push(this.email)
+                
+                
+            });
+                
+            }
+            
         }
     },
 })
