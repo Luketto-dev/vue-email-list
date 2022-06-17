@@ -15,10 +15,7 @@ new Vue({
     mathods:{
         generateEmail(){
             // recuperare tramite chiamata ajax una email
-            axios.get("https:flynn.boolean.careers/exercises/api/random/mail")
-            .then(function (axiosResp){
-                console.log(axiosResp.data)
-            });
+            console.log('sono nel click')
         }
     },
 })
@@ -28,4 +25,9 @@ new Vue({
 .get("https:flynn.boolean.careers/exercises/api/random/mail")
 .then(function (response){
     console.log(response)
+
+    axios.get("https:flynn.boolean.careers/exercises/api/random/mail")
+            .then(function (axiosResp){
+                console.log(axiosResp.data)
+            });
 })*/
